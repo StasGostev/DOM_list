@@ -1,6 +1,6 @@
 const main_container = document.getElementById('main_container');
 
-function createThree(container, data_obj) {
+function createTree(container, data_obj) {
 
   const ul = document.createElement('ul');
   const isEmpty = JSON.stringify(data_obj) === "{}"; 
@@ -13,9 +13,9 @@ function createThree(container, data_obj) {
     const li = document.createElement('li');
     li.innerHTML = key;
     ul.append(li);    
-    createThree(li, data_obj[key]);
+    createTree(li, data_obj[key]);
   }
   
   container.append(ul)
 }
-createThree( main_container, data);
+createTree( main_container, data);
