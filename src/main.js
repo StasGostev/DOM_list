@@ -14,9 +14,9 @@ function createThree(container, data_obj) {
     li.innerHTML = key;
     ul.append(li);
         
-    if (!isEmpty) {
+    // if (!isEmpty) {
       createThree(li, data_obj[key]);
-    } 
+    // } 
      
   }
   container.append(ul)
