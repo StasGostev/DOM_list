@@ -12,13 +12,10 @@ function createThree(container, data_obj) {
   for (let key in data_obj) {
     const li = document.createElement('li');
     li.innerHTML = key;
-    ul.append(li);
-        
-    // if (!isEmpty) {
-      createThree(li, data_obj[key]);
-    // } 
-     
+    ul.append(li);    
+    createThree(li, data_obj[key]);
   }
+  
   container.append(ul)
 }
 createThree( main_container, data);
